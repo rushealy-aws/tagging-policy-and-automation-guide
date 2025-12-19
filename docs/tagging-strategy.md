@@ -12,19 +12,19 @@ All AWS resources must include these four mandatory tags:
 
 | Tag Key | Purpose | Allowed Values | Example |
 |---------|---------|----------------|---------|
-| `Environment` | SDLC stage identification | `prod`, `dev`, `test`, `qa`, `staging` | `Environment=prod` |
-| `Owner` | Budget/operational responsibility | Department or team name | `Owner=platform-team` |
-| `CostCenter` | Financial tracking | Budget code or department ID | `CostCenter=eng-001` |
-| `Application` | Application/workload identification | Application name or ID | `Application=customer-portal` |
+| `environment` | SDLC stage identification | `prod`, `dev`, `test`, `qa`, `staging` | `environment=prod` |
+| `owner` | Budget/operational responsibility | Department or team name | `owner=platform-team` |
+| `costcenter` | Financial tracking | Budget code or department ID | `costcenter=eng-001` |
+| `application` | Application/workload identification | Application name or ID | `application=customer-portal` |
 
 ### Optional Tags (Recommended)
 
 | Tag Key | Purpose | Allowed Values | Example |
 |---------|---------|----------------|---------|
-| `OS` | Operating system (for patch management) | `windows`, `linux`, `amazon-linux`, `ubuntu` | `OS=amazon-linux` |
-| `Backup` | Backup requirement | `required`, `not-required`, `daily`, `weekly` | `Backup=daily` |
-| `DataClassification` | Data sensitivity level | `public`, `internal`, `confidential`, `restricted` | `DataClassification=internal` |
-| `Project` | Project or initiative | Project name or code | `Project=migration-2024` |
+| `os` | Operating system (for patch management) | `windows`, `linux`, `amazon-linux`, `ubuntu` | `os=amazon-linux` |
+| `backup` | Backup requirement | `required`, `not-required`, `daily`, `weekly` | `backup=daily` |
+| `dataclassification` | Data sensitivity level | `public`, `internal`, `confidential`, `restricted` | `dataclassification=internal` |
+| `project` | Project or initiative | Project name or code | `project=migration-2024` |
 
 ## Tag Naming Conventions
 
@@ -36,11 +36,11 @@ All AWS resources must include these four mandatory tags:
 
 ### Examples of Proper Formatting
 ```
-Environment=prod
-Owner=platform-team
-CostCenter=eng-001
-Application=customer-portal
-OS=amazon-linux
+environment=prod
+owner=platform-team
+costcenter=eng-001
+application=customer-portal
+os=amazon-linux
 ```
 
 ## Priority Resource Types
@@ -108,10 +108,10 @@ Use AWS Organizations tag policies to enforce mandatory tags:
 ### Billing Tags Activation
 1. Navigate to AWS Billing Console → Cost Allocation Tags
 2. Activate these tags for cost reporting:
-   - `Environment`
-   - `Owner`
-   - `CostCenter`
-   - `Application`
+   - `environment`
+   - `owner`
+   - `costcenter`
+   - `application`
 
 ### Cost Reporting
 - Generate monthly cost allocation reports
@@ -126,10 +126,10 @@ Use AWS Organizations tag policies to enforce mandatory tags:
 # Standard tags for all resources
 locals {
   common_tags = {
-    Environment    = var.environment
-    Owner         = var.owner
-    CostCenter    = var.cost_center
-    Application   = var.application_name
+    environment    = var.environment
+    owner         = var.owner
+    costcenter    = var.cost_center
+    application   = var.application_name
   }
 }
 ```
