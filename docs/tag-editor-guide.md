@@ -268,3 +268,12 @@ After tagging resources with Tag Editor:
 2. Set up [Cost Allocation Tags](billing-tags-guide.md) for financial tracking
 3. Implement [Automation](automation-guide.md) for ongoing compliance
 4. Regular audits using Tag Editor to maintain tag hygiene
+
+## References
+
+### AWS Documentation
+- [AWS Tag Editor User Guide](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html)
+- [Finding Resources to Tag](https://docs.aws.amazon.com/tag-editor/latest/userguide/find-resources-to-tag.html)
+- [Managing Tags with Tag Editor](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging-resources.html)
+- [Supported Resource Types](https://docs.aws.amazon.com/ARG/latest/userguide/supported-resources.html)
+- [AWS Resource Groups](https://docs.aws.amazon.com/ARG/latest/userguide/welcome.html)

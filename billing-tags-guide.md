@@ -332,3 +332,12 @@ aws ce update-cost-allocation-tags-status \
 5. **Optimize Continuously**: Use insights to refine your tagging strategy
 
 For ongoing tag management, see the [Automation Guide](automation-guide.md) to implement automated tagging for new resources.
+
+## References
+
+### AWS Documentation
+- [Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html)
+- [Activating User-Defined Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activating-tags.html)
+- [AWS Cost Explorer User Guide](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)
+- [AWS Budgets User Guide](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
+- [Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/what-is-cur.html)

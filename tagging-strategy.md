@@ -12,19 +12,19 @@ All AWS resources must include these four mandatory tags:
 
 | Tag Key | Purpose | Allowed Values | Example |
 |---------|---------|----------------|---------|
-| `Environment` | SDLC stage identification | `prod`, `dev`, `test`, `qa`, `staging` | `Environment=prod` |
-| `Owner` | Budget/operational responsibility | Department or team name | `Owner=platform-team` |
-| `CostCenter` | Financial tracking | Budget code or department ID | `CostCenter=eng-001` |
-| `Application` | Application/workload identification | Application name or ID | `Application=customer-portal` |
+| `environment` | SDLC stage identification | `prod`, `dev`, `test`, `qa`, `staging` | `environment=prod` |
+| `owner` | Budget/operational responsibility | Department or team name | `owner=platform-team` |
+| `costcenter` | Financial tracking | Budget code or department ID | `costcenter=eng-001` |
+| `application` | Application/workload identification | Application name or ID | `application=customer-portal` |
 
 ### Optional Tags (Recommended)
 
 | Tag Key | Purpose | Allowed Values | Example |
 |---------|---------|----------------|---------|
-| `OS` | Operating system (for patch management) | `windows`, `linux`, `amazon-linux`, `ubuntu` | `OS=amazon-linux` |
-| `Backup` | Backup requirement | `required`, `not-required`, `daily`, `weekly` | `Backup=daily` |
-| `DataClassification` | Data sensitivity level | `public`, `internal`, `confidential`, `restricted` | `DataClassification=internal` |
-| `Project` | Project or initiative | Project name or code | `Project=migration-2024` |
+| `os` | Operating system (for patch management) | `windows`, `linux`, `amazon-linux`, `ubuntu` | `os=amazon-linux` |
+| `backup` | Backup requirement | `required`, `not-required`, `daily`, `weekly` | `backup=daily` |
+| `dataclassification` | Data sensitivity level | `public`, `internal`, `confidential`, `restricted` | `dataclassification=internal` |
+| `project` | Project or initiative | Project name or code | `project=migration-2024` |
 
 ## Tag Naming Conventions
 
@@ -36,18 +36,18 @@ All AWS resources must include these four mandatory tags:
 
 ### Examples of Proper Formatting
 ```
-Environment=prod
-Owner=platform-team
-CostCenter=eng-001
-Application=customer-portal
-OS=amazon-linux
+environment=prod
+owner=platform-team
+costcenter=eng-001
+application=customer-portal
+os=amazon-linux
 ```
 
 ## Priority Resource Types
 
-Based on current AWS spend, focus tagging efforts on these high-cost resources:
+Focus tagging efforts on these high-cost resources:
 
-### Tier 1 (Highest Priority - $800/month)
+### Tier 1 (Highest Priority)
 - **ECS Services and Tasks**
 - **ECS Clusters**
 - **EC2 Instances** (supporting ECS)
@@ -108,10 +108,10 @@ Use AWS Organizations tag policies to enforce mandatory tags:
 ### Billing Tags Activation
 1. Navigate to AWS Billing Console → Cost Allocation Tags
 2. Activate these tags for cost reporting:
-   - `Environment`
-   - `Owner`
-   - `CostCenter`
-   - `Application`
+   - `environment`
+   - `owner`
+   - `costcenter`
+   - `application`
 
 ### Cost Reporting
 - Generate monthly cost allocation reports
@@ -126,10 +126,10 @@ Use AWS Organizations tag policies to enforce mandatory tags:
 # Standard tags for all resources
 locals {
   common_tags = {
-    Environment    = var.environment
-    Owner         = var.owner
-    CostCenter    = var.cost_center
-    Application   = var.application_name
+    environment    = var.environment
+    owner         = var.owner
+    costcenter    = var.cost_center
+    application   = var.application_name
   }
 }
 ```
@@ -147,7 +147,9 @@ locals {
 5. **Automation First**: Implement automated tagging for new resources
 6. **Cost Focus**: Prioritize resources that drive the highest costs
 
-## Tag Value Guidelines
+## Tag Value Suggestions
+
+The following are example tag values to help you get started. For a comprehensive worksheet to define your organization's specific values, see the [Tagging Worksheet](tagging-worksheet.md).
 
 ### Environment Values
 - `prod`: Production workloads
@@ -166,10 +168,27 @@ locals {
 - Format: `dept-###` (e.g., `eng-001`, `ops-002`)
 - Coordinate with finance team for proper codes
 
+**📋 Complete the [Tagging Worksheet](tagging-worksheet.md) to define your organization's specific tag values.**
+
 ## Next Steps
 
 1. Review and approve this tagging strategy
-2. Begin with [Implementation Guide](implementation-guide.md)
-3. Use [Tag Editor Guide](tag-editor-guide.md) for bulk operations
-4. Set up [Billing Tags](billing-tags-guide.md) for cost tracking
-5. Implement [Automation](automation-guide.md) for ongoing compliance
+2. Complete the [Tagging Worksheet](tagging-worksheet.md) with your organization's values
+3. Begin with [Implementation Guide](implementation-guide.md)
+4. Use [Tag Editor Guide](tag-editor-guide.md) for bulk operations
+5. Set up [Billing Tags](billing-tags-guide.md) for cost tracking
+6. Implement [Automation](automation-guide.md) for ongoing compliance
+
+## References
+
+### AWS Documentation
+- [Best Practices for Tagging AWS Resources](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
+- [Defining and Publishing a Tagging Schema](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/defining-and-publishing-a-tagging-schema.html)
+- [AWS Organizations Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html)
+- [AWS Config Rules for Tag Compliance](https://docs.aws.amazon.com/config/latest/developerguide/required-tags.html)
+- [Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html)
+
+### AWS Tools and Services
+- [AWS Tag Editor](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html)
+- [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)
+- [AWS Resource Groups](https://docs.aws.amazon.com/ARG/latest/userguide/welcome.html)

@@ -937,3 +937,17 @@ if __name__ == "__main__":
 5. **Test and Refine**: Continuously improve automation based on results
 
 This automation approach ensures consistent tagging while reducing manual effort and improving compliance across your AWS environment.
+
+## References
+
+### AWS Documentation
+- [AWS Organizations Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html)
+- [AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html)
+- [Required Tags Config Rule](https://docs.aws.amazon.com/config/latest/developerguide/required-tags.html)
+- [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+- [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+
+### AWS Services
+- [AWS Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html)
+- [AWS CloudWatch](https://docs.aws.amazon.com/cloudwatch/latest/monitoring/WhatIsCloudWatch.html)
+- [AWS SNS](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)

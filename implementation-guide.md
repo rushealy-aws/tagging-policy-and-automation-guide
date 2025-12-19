@@ -138,7 +138,7 @@ This guide provides a step-by-step approach to implementing your AWS tagging str
 
 ### Day 6-10: ECS Infrastructure Tagging
 
-**Priority: ECS Resources ($800/month)**
+**Priority: ECS Resources (Highest Cost)**
 
 1. **Inventory ECS Resources**
    ```bash
@@ -179,7 +179,7 @@ This guide provides a step-by-step approach to implementing your AWS tagging str
 
 ### Day 15-18: CloudWatch Resources
 
-**Priority: CloudWatch costs (second highest)**
+**Priority: CloudWatch costs (High Priority)**
 
 1. **Tag CloudWatch Log Groups**
    ```bash
@@ -410,3 +410,12 @@ After completing this implementation:
 - **Internal Documentation**: Maintain in version control
 - **Team Training**: Regular sessions on tagging best practices
 - **Escalation Path**: Define process for tagging issues and exceptions
+
+## References
+
+### AWS Documentation
+- [AWS Tagging Best Practices](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
+- [Implementing and Enforcing Tagging](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/implementing-and-enforcing-tagging.html)
+- [AWS Organizations Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html)
+- [AWS Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html)
+- [Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html)

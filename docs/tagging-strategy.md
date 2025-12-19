@@ -45,9 +45,9 @@ os=amazon-linux
 
 ## Priority Resource Types
 
-Based on current AWS spend, focus tagging efforts on these high-cost resources:
+Focus tagging efforts on these high-cost resources:
 
-### Tier 1 (Highest Priority - $800/month)
+### Tier 1 (Highest Priority)
 - **ECS Services and Tasks**
 - **ECS Clusters**
 - **EC2 Instances** (supporting ECS)
@@ -147,7 +147,9 @@ locals {
 5. **Automation First**: Implement automated tagging for new resources
 6. **Cost Focus**: Prioritize resources that drive the highest costs
 
-## Tag Value Guidelines
+## Tag Value Suggestions
+
+The following are example tag values to help you get started. For a comprehensive worksheet to define your organization's specific values, see the [Tagging Worksheet](tagging-worksheet.md).
 
 ### Environment Values
 - `prod`: Production workloads
@@ -166,10 +168,27 @@ locals {
 - Format: `dept-###` (e.g., `eng-001`, `ops-002`)
 - Coordinate with finance team for proper codes
 
+**📋 Complete the [Tagging Worksheet](tagging-worksheet.md) to define your organization's specific tag values.**
+
 ## Next Steps
 
 1. Review and approve this tagging strategy
-2. Begin with [Implementation Guide](implementation-guide.md)
-3. Use [Tag Editor Guide](tag-editor-guide.md) for bulk operations
-4. Set up [Billing Tags](billing-tags-guide.md) for cost tracking
-5. Implement [Automation](automation-guide.md) for ongoing compliance
+2. Complete the [Tagging Worksheet](tagging-worksheet.md) with your organization's values
+3. Begin with [Implementation Guide](implementation-guide.md)
+4. Use [Tag Editor Guide](tag-editor-guide.md) for bulk operations
+5. Set up [Billing Tags](billing-tags-guide.md) for cost tracking
+6. Implement [Automation](automation-guide.md) for ongoing compliance
+
+## References
+
+### AWS Documentation
+- [Best Practices for Tagging AWS Resources](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
+- [Defining and Publishing a Tagging Schema](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/defining-and-publishing-a-tagging-schema.html)
+- [AWS Organizations Tag Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html)
+- [AWS Config Rules for Tag Compliance](https://docs.aws.amazon.com/config/latest/developerguide/required-tags.html)
+- [Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html)
+
+### AWS Tools and Services
+- [AWS Tag Editor](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html)
+- [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-what-is.html)
+- [AWS Resource Groups](https://docs.aws.amazon.com/ARG/latest/userguide/welcome.html)
