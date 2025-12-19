@@ -47,9 +47,9 @@ Ensure your IAM user/role has these permissions:
 
 ### Step 2: Choose Resource Types
 
-#### For High-Cost Resources (Priority Order):
+#### For High-Cost Resources (Examples):
 
-**ECS Resources (Highest Priority - $800/month)**
+**ECS Resources**
 - `AWS::ECS::Cluster`
 - `AWS::ECS::Service`
 - `AWS::ECS::TaskDefinition`
