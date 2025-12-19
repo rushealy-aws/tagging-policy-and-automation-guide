@@ -34,8 +34,8 @@ This repository provides a complete tagging strategy for organizations with mixe
 
 ## Priority Resources (by Cost Impact)
 
-Based on your current AWS spend:
-- **ECS Services** ($800/month) - Highest priority
+Example AWS spend:
+- **ECS Services** - Highest priority
 - **CloudWatch** - Logs, metrics, and dashboards
 - **NAT Gateways** - Network infrastructure
 - **Application Load Balancers** - Load balancing infrastructure
